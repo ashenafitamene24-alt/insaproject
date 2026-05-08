@@ -7,6 +7,7 @@ import { signOut, useSession } from "next-auth/react";
 import { useState, useEffect } from "react";
 import NotificationPanel from "./NotificationPanel";
 import CriticalRiskToast from "./CriticalRiskToast";
+import LoadingTransition from "./LoadingTransition";
 import {
   HiOutlineViewGrid, HiOutlineShieldExclamation, HiOutlineChartBar,
   HiOutlineUser, HiOutlineCog, HiOutlineNewspaper, HiOutlineAcademicCap,
@@ -430,6 +431,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       </div>
 
       <CriticalRiskToast />
+      <LoadingTransition />
     </div>
   );
 }
